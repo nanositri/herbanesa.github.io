@@ -1,0 +1,353 @@
+/* body */
+body {
+  margin: 0;
+  padding: 0;
+  /* min-height: 2000px; */
+  background-color: black;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 7%;
+  background-color: rgba(1, 1, 1, 0.425);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar-toggler-icon {
+  background-color: transparent;
+  border: white;
+  border-color: #ffffff;
+}
+
+.navbar-nav a.nav-link {
+  color: white;
+  padding-left: 2rem;
+  margin: 14px;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #009245;
+}
+
+.navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0, 2rem;
+  border-bottom: 0.1rem solid #009245;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar-extra a {
+  color: #ffffff;
+}
+
+#toggle {
+  color: #ffffff;
+}
+
+/* hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/bg.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgb(72, 72, 92);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #22d676;
+}
+
+.hero .content p {
+  margin-left: 45px;
+  color: #ffffff;
+}
+
+/* Galeri */
+.galeri .container {
+  width: 80%;
+  height: 80vh;
+  background: #009245;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin-top: 100px;
+}
+
+.pap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-box {
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 50px;
+  background: url(../img/gl1.JPG);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: width 0.5s;
+}
+.img-box:hover {
+  width: 200px;
+  cursor: pointer;
+}
+.img-box:nth-child(2) {
+  background: url(../img/gl2.JPG);
+  background-size: cover;
+  background-position: center;
+}
+.img-box:nth-child(3) {
+  background: url(../img/gl4.JPG);
+  background-size: cover;
+  background-position: center;
+}
+.img-box:nth-child(4) {
+  background: url(../img/gl5.JPG);
+  background-size: cover;
+  background-position: center;
+}
+.img-box:nth-child(5) {
+  background: url(../img/gl7.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Produk */
+.produk {
+  padding: 6rem 7% 1.4rem;
+}
+
+.produk h2 {
+  color: #ca8c17;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.produk .row {
+  display: flex;
+}
+
+.produk .row .produk-img {
+  flex: 1 1 10rem;
+}
+
+.produk .row .produk-img img {
+  width: 100%;
+  margin-top: -40px;
+}
+
+.produk .row .content {
+  flex: 1 1 20rem;
+  padding: 0 1rem;
+}
+
+.produk .row .content {
+  color: #ffffff;
+  text-align: justify;
+  margin-top: 40px;
+}
+
+.produk .row .content h3 {
+  font-weight: bold;
+}
+
+.produk .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-direction: column; /* Mengatur konten berada di tengah vertikal */
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Membuat section selalu berada di tengah vertikal */
+  background: rgba(0, 0, 0, 0.5); /* Latar belakang dengan sedikit blur */
+  color: white; /* Warna teks menjadi putih agar terlihat jelas di atas latar belakang yang gelap */
+  padding: 20px; /* Ruang di sekitar konten */
+  text-align: center; /* Rata tengah teks */
+}
+
+.about h2 {
+  color: #ca8c17;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span {
+  color: #009245;
+}
+
+.about .content {
+  max-width: 800px; /* Lebar maksimum konten */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk membedakan dari latar belakang */
+  line-height: 1.5; /* Spasi antar baris untuk memudahkan pembacaan */
+  background: rgba(48, 45, 45, 0.27);
+  border-radius: 25px;
+  text-align: justify;
+}
+
+/* Sosmed */
+.btn-floating {
+  position: fixed;
+  right: 25px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: 0;
+  z-index: 9999999;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.btn-floating:hover {
+  width: auto;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.btn-floating span {
+  font-size: 16px;
+  margin-left: 5px;
+  transition: 0.2s;
+  line-height: 0px;
+  display: none;
+}
+
+.btn-floating:hover span {
+  display: inline-block;
+}
+
+.btn-floating:hover img {
+  margin-bottom: -3px;
+}
+
+.btn-floating.facebook {
+  bottom: 25px;
+  background-color: #145ee9;
+  border: 2px solid #ffffff;
+}
+
+.btn-floating.instagram {
+  bottom: 85px;
+  background-color: #a70b61;
+  border: 2px solid #ffffff;
+}
+
+.btn-floating.tiktok {
+  bottom: 145px;
+  background-color: #7a1d86;
+  border: 2px solid #ffffff;
+}
+
+/* Footer */
+.site-footer {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Latar belakang transparan dengan opasitas 0.8 */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: -110px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 100px;
+  margin: 0 20px;
+}
+
+/* media Quaries */
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  /* .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 30rem;
+    height: 100vh;
+  } */
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
