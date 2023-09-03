@@ -92,6 +92,7 @@ html {
 .hero .content h1 {
   font-size: 5em;
   text-align: center;
+  margin-left: -165px;
   color: #ffffff;
   text-shadow: 1px 1px 3px rgb(72, 72, 92);
   line-height: 1.2;
